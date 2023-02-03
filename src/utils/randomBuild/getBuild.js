@@ -7,5 +7,6 @@ export default async function getBuild() {
     build.push(await randomMythic());
     build.push(await randomBoots());
     build.push(await randomLegendary());
+    build.push(Date.now())
     return build;
 }

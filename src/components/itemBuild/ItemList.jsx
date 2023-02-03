@@ -5,7 +5,7 @@ import ItemBoots from "./ItemBoots";
 
 export default function ItemList({ build }) {
     
-    if (build == undefined) {
+    if (build === 0) {
         return;
     }
     
