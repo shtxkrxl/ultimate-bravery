@@ -11,7 +11,7 @@ export default function ItemLegendary({ legendary }) {
     return (
         <div
             title={legendary.name}
-            className="h-20 w-20 rounded-md border-4 border-yellow-400
+            className="h-20 w-20 rounded-lg border-4 border-yellow-400
             bg-contain bg-no-repeat shadow-md shadow-yellow-600/50 transition
             ease-out hover:shadow-lg hover:shadow-yellow-600/50"
             style={backStyle}

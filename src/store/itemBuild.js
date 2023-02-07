@@ -1,16 +1,19 @@
-import { makeAutoObservable } from "mobx"
-import getBuild from "../utils/randomBuild/getBuild"
+import { makeAutoObservable, runInAction } from "mobx";
+import getBuild from "../utils/randomBuild/getBuild";
 
 class itemBuild {
-    build = 0
+    build = 0;
 
     constructor() {
-        makeAutoObservable(this)
+        makeAutoObservable(this);
     }
 
     async changeBuild() {
-        this.build = await getBuild()
+        const build = await getBuild();
+        runInAction(() => {
+            this.build = build;
+        });
     }
 }
 
-export default new itemBuild()
+export default new itemBuild();
