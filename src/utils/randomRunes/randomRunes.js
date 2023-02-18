@@ -75,9 +75,8 @@ import magicresist from '../../assets/stats/magicresist.png'
 
 import randomFromArray from '../randomFromArray'
 
-
 export default function randomRunes() {
-    const runes = [];
+    const runes = []
 
     const runesList = [
         [
@@ -86,7 +85,7 @@ export default function randomRunes() {
             [r121, r122, r123],
             [r131, r132, r133],
             [r141, r142, r143],
-            "shadow-yellow-400/70 hover:shadow-yellow-400/70 border-yellow-400"
+            'shadow-yellow-400/70 hover:shadow-yellow-400/70 border-yellow-400',
         ],
         [
             // доминирование
@@ -94,7 +93,7 @@ export default function randomRunes() {
             [r221, r222, r223],
             [r231, r232, r233],
             [r241, r242, r243, r244],
-            "shadow-rose-600/70 hover:shadow-rose-600/70 border-rose-600"
+            'shadow-rose-600/70 hover:shadow-rose-600/70 border-rose-600',
         ],
         [
             // колдовство
@@ -102,7 +101,7 @@ export default function randomRunes() {
             [r321, r322, r323],
             [r331, r332, r333],
             [r341, r342, r343],
-            "shadow-indigo-400/70 hover:shadow-indigo-400/70 border-indigo-400"
+            'shadow-indigo-400/70 hover:shadow-indigo-400/70 border-indigo-400',
         ],
         [
             // прочность
@@ -110,7 +109,7 @@ export default function randomRunes() {
             [r421, r422, r423],
             [r431, r432, r433],
             [r441, r442, r443],
-            "shadow-lime-400/70 hover:shadow-lime-400/70 border-lime-400"
+            'shadow-lime-400/70 hover:shadow-lime-400/70 border-lime-400',
         ],
         [
             // вдохновение
@@ -118,18 +117,18 @@ export default function randomRunes() {
             [r521, r522, r523],
             [r531, r532, r533],
             [r541, r542, r543],
-            "shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400"
+            'shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400',
         ],
     ]
-    
+
     let runeBranch = randomFromArray(runesList)
     for (let i = 0; i < 4; i++) {
         runes.push(randomFromArray(runeBranch[i]))
     }
     runes.push(runeBranch[4])
 
-    const runeBranchID = runesList.indexOf(runeBranch);
-    runesList.splice(runeBranchID, 1);
+    const runeBranchID = runesList.indexOf(runeBranch)
+    runesList.splice(runeBranchID, 1)
 
     runeBranch = randomFromArray(runesList)
     for (let i = 1; i < 3; i++) {
@@ -141,23 +140,50 @@ export default function randomRunes() {
         runes.push(randomFromArray(stats[i]))
     }
 
-    return runes;
+    return runes
 }
 
 const stats = [
     [
-        {image: adaptive, style: "shadow-violet-600/70 hover:shadow-violet-600/70 border-violet-600"},
-        {image: attackspeed, style: "shadow-yellow-400/70 hover:shadow-yellow-400/70 border-yellow-400"},
-        {image: haste, style: "shadow-white/70 hover:shadow-white/70 border-white"},
+        {
+            image: adaptive,
+            style: 'shadow-violet-600/70 hover:shadow-violet-600/70 border-violet-600',
+        },
+        {
+            image: attackspeed,
+            style: 'shadow-yellow-400/70 hover:shadow-yellow-400/70 border-yellow-400',
+        },
+        {
+            image: haste,
+            style: 'shadow-white/70 hover:shadow-white/70 border-white',
+        },
     ],
     [
-        {image: adaptive, style: "shadow-violet-600/70 hover:shadow-violet-600/70 border-violet-600"},
-        {image: armor, style: "shadow-red-400/70 hover:shadow-red-400/70 border-red-400"},
-        {image: magicresist, style: "shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400"},
+        {
+            image: adaptive,
+            style: 'shadow-violet-600/70 hover:shadow-violet-600/70 border-violet-600',
+        },
+        {
+            image: armor,
+            style: 'shadow-red-400/70 hover:shadow-red-400/70 border-red-400',
+        },
+        {
+            image: magicresist,
+            style: 'shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400',
+        },
     ],
     [
-        {image: health, style: "shadow-green-700/70 hover:shadow-green-700/70 border-green-700"},
-        {image: armor, style: "shadow-red-400/70 hover:shadow-red-400/70 border-red-400"},
-        {image: magicresist, style: "shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400"},
+        {
+            image: health,
+            style: 'shadow-green-700/70 hover:shadow-green-700/70 border-green-700',
+        },
+        {
+            image: armor,
+            style: 'shadow-red-400/70 hover:shadow-red-400/70 border-red-400',
+        },
+        {
+            image: magicresist,
+            style: 'shadow-sky-400/70 hover:shadow-sky-400/70 border-sky-400',
+        },
     ],
 ]
