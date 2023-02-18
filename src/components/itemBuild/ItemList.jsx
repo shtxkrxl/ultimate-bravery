@@ -10,7 +10,7 @@ export default function ItemList({ build }) {
     }
     
     return (
-        <div className="flex items-center gap-4 p-10">
+        <div className="flex items-center gap-4">
             <ItemMythic mythic={build[0]} />
             <ItemBoots boots={build[1]} />
             <ItemLegendary legendary={build[2][0]} />

@@ -10,6 +10,7 @@ export default function Summoner({ summoner }) {
 
     return (
         <div
+            title={summoner.name}
             className="h-14 w-14 rounded-lg border-4 border-yellow-400
             bg-contain bg-no-repeat shadow-md shadow-yellow-600/50 transition
             ease-out hover:shadow-lg hover:shadow-yellow-600/50"

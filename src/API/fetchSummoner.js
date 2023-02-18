@@ -1,8 +1,13 @@
 import axios from "axios";
+import fetchLolVersion from "./fetchLolVersion";
 
-const summonerUrl='http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/summoner.json'
+export default async function fetchSummoner(id) {
+    const versionLol = await fetchLolVersion();
+    const summonerUrl =
+        "http://ddragon.leagueoflegends.com/cdn/" +
+        versionLol +
+        "/data/en_US/summoner.json";
 
-export default async function fetchSummoner (id) {
-    const response = await axios.get(summonerUrl)
-    return response.data.data[id]
+    const response = await axios.get(summonerUrl);
+    return response.data.data[id];
 }

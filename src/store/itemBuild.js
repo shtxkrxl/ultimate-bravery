@@ -8,8 +8,8 @@ class itemBuild {
         makeAutoObservable(this);
     }
 
-    async changeBuild() {
-        const build = await getBuild();
+    async changeBuild(classCharacter) {
+        const build = await getBuild(classCharacter);
         runInAction(() => {
             this.build = build;
         });
